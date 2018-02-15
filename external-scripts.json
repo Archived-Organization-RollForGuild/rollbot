@@ -1,6 +1,5 @@
 [
   "hubot-diagnostics",
-  "hubot-github-webhook-listener",
   "hubot-help",
   "hubot-heroku-keepalive",
   "hubot-google-images",
