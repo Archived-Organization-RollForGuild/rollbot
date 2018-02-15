@@ -9,7 +9,6 @@
     "hubot": "^2.19.0",
     "hubot-diagnostics": "0.0.2",
     "hubot-github-repo-event-notifier": "^1.7.0",
-    "hubot-github-webhook-listener": "^0.9.1",
     "hubot-google-images": "^0.2.7",
     "hubot-google-translate": "^0.2.1",
     "hubot-help": "^0.2.2",
