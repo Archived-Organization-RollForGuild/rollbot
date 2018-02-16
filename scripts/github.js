@@ -39,6 +39,7 @@ module.exports = robot => {
     const {
       assignees,
       body,
+      html_url,
       labels,
       milestone,
       number,
@@ -78,14 +79,14 @@ module.exports = robot => {
         },
         {
           title: 'Labels',
-          value: !labels.length ? 'None' : labels.map(label => `<${rewriteGithubURL(label.url)}|${label.name}>`).join(', '),
+          value: !labels.length ? 'None' : labels.map(label => `\`<${rewriteGithubURL(label.url)}|${label.name}>\``).join(', '),
         },
       ],
       footer: `${organization.login}`,
       footer_icon: organization.avatar_url,
       text: body,
       title: `#${number} ${title}`,
-      title_link: rewriteGithubURL(url),
+      title_link: html_url,
       ts: (Date.now() / 1000).toFixed(),
     }
 
