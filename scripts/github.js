@@ -64,6 +64,11 @@ module.exports = robot => {
         },
         {
           short: true,
+          title: 'Event type',
+          value: `\`${action}\``,
+        },
+        {
+          short: true,
           title: 'Assigned to',
           value: !assignees.length ? 'None' : assignees.map(assignee => `<${rewriteGithubURL(assignee.url)}|${assignee.login}>`).join(', '),
         },
