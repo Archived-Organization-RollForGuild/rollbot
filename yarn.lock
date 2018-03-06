@@ -654,6 +654,12 @@ hubot-heroku-keepalive@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/hubot-heroku-keepalive/-/hubot-heroku-keepalive-1.0.3.tgz#2950e28095ee4a6ace2b76f90e2a91ba91e6813c"
 
+hubot-jira-links@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/hubot-jira-links/-/hubot-jira-links-1.0.8.tgz#2b3d1bbdae4754309392a7758c461e3ba9aa8dd7"
+  dependencies:
+    coffee-script "~1.6"
+
 hubot-maps@0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/hubot-maps/-/hubot-maps-0.0.3.tgz#c8fc5b0348754e62616d5b99b2bf3904c5ee583c"
