@@ -40,13 +40,19 @@ module.exports = async robot => {
 
   const stream = twitter.stream('statuses/filter', { track: '@_rollbot' })
 
-  stream.on('data', async ({ extended_tweet, id_str }) => {
-    const tweet = extended_tweet.full_text
+  stream.on('data', async tweet => {
+    const {
+      extended_tweet,
+      id_str,
+      text,
+      user,
+    } = tweet
+    const tweetBody = extended_tweet ? extended_tweet.full_text : text
     const totals = []
     let status = ''
 
-    if (activationRegex.test(tweet)) {
-      const matches = tweet.match(diceFinderRegex)
+    if (activationRegex.test(tweetBody)) {
+      const matches = tweetBody.match(diceFinderRegex)
 
       for (const match of matches) {
         const [, dice, modifier, modifierValue] = diceFinderRegex.exec(match)
