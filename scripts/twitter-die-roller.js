@@ -95,10 +95,9 @@ module.exports = async robot => {
 
       status += `Total: ${sum(totals)}`
 
-      console.log('status', status)
-
       twitter.post('statuses/update', {
         auto_populate_reply_metadata: true,
+        exclude_reply_user_ids: 977257179504893952,
         in_reply_to_status_id: id_str,
         status,
       })
