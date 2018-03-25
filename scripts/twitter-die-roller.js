@@ -46,9 +46,9 @@ module.exports = async robot => {
       text,
       user,
     } = tweet
-    const matches = null
     const tweetBody = extended_tweet ? extended_tweet.full_text : text
     const totals = []
+    let matches = null
     let status = ''
 
     if (matches = tweetBody.match(diceFinderRegex)) {
