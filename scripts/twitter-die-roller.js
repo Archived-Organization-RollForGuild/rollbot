@@ -35,7 +35,6 @@ module.exports = async robot => {
     consumer_secret: process.env.RFG_ROLLBOT_TWITTER_CONSUMER_SECRET,
   })
 
-  const activationRegex = /roll the dice|rtd/mi
   const diceFinderRegex = /(\d+d\d+)(?:\s*([-+/*])\s*(\d))?/gi
 
   const stream = twitter.stream('statuses/filter', { track: '@_rollbot' })
@@ -47,13 +46,12 @@ module.exports = async robot => {
       text,
       user,
     } = tweet
+    const matches = null
     const tweetBody = extended_tweet ? extended_tweet.full_text : text
     const totals = []
     let status = ''
 
-    if (activationRegex.test(tweetBody)) {
-      const matches = tweetBody.match(diceFinderRegex)
-
+    if (matches = tweetBody.match(diceFinderRegex)) {
       for (const match of matches) {
         const [, dice, modifier, modifierValue] = diceFinderRegex.exec(match)
 
