@@ -93,6 +93,11 @@ module.exports = async robot => {
 
       status += `Total: ${sum(totals)}`
 
+      console.log('================================================================================')
+      console.log(`Responding to @${screen_name}:`)
+      console.log(status)
+      console.log('================================================================================')
+
       twitter.post('statuses/update', {
         auto_populate_reply_metadata: true,
         exclude_reply_user_ids: 977257179504893952,
