@@ -94,7 +94,7 @@ module.exports = async robot => {
       status += `Total: ${sum(totals)}`
 
       console.log('================================================================================')
-      console.log(`Responding to @${screen_name}:`)
+      console.log(`Responding to @${user.screen_name}:`)
       console.log(status)
       console.log('================================================================================')
 
